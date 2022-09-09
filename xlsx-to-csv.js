@@ -12,9 +12,9 @@ names.map(name => {
     if (!fs.existsSync(copyFilePath)){
         fs.mkdirSync(copyFilePath);
     }
-    if (name !== "Nombre Archivo")
+    if (name !== "Nombre Archivo"){
     fs.copyFile(fileToConvert, copyFilePath+name, (err) => {
         if (err) throw err;
         console.log(`csvTest.csv renamed to ${name} and saved in renamedFiles`);
-      });
+      });}
 })
